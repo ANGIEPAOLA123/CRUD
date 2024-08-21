@@ -30,18 +30,18 @@ table {
 }
 
 th, td{
-    border: 2px solid #f74780;
+    border: 2px solid #b97efd;
     padding: 10px;
     text-align: center;
 }
 
 th {
-    background-color: #ffb3c6;
+    background-color: #ceaef3;
 }
 
 form{
-    background-color: #ffb3c6;
-    border:  solid 5px #f74780;
+    background-color: #ceaef3;
+    border:  solid 5px #b476fc;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -51,7 +51,7 @@ form{
 
 input, select, button{
     padding: 12px;
-    border:solid 2px #f74780;
+    border:solid 2px #c592ff;
     border-radius: 8px;
     outline: none; 
 }
@@ -61,14 +61,14 @@ button{
 }
 
 button{
-    background-color: #ff8fab;
-    color: white;
+    background-color: #c38eff;
+    color: rgb(255, 254, 254);
     cursor: pointer;
 }
 
 button:hover{
-    background-color: #fb6f92;
-    color: white;
+    background-color: #9f53f7;
+    color: rgb(255, 254, 254);
 }
 
 label{

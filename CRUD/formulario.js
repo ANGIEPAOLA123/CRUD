@@ -128,7 +128,7 @@ tipodocumento.addEventListener("change", () => {
 // AGREGANDO LA NUEVA OPTION AL SELECT
 const documentos = () => {
     const fragment = document.createDocumentFragment();
-    fetch('http://localhost:3000/documento')
+    fetch('http://localhost:3000/documents')
     .then((response) => response.json())
     .then((data) => {
 
@@ -152,11 +152,16 @@ const documentos = () => {
 // LISTAR LOS USUARIOS 
 const listarUsuarios = async () => {
     const data = await solicitud("users");
-    const documentos = await solicitud("documento");
+    const documentos = await solicitud("documents");
 
     data.forEach(element => {
         
-        const documento_nombre = documentos.find((documento) => documento.id === element.tipodocumento).nombre;
+        const documento_nombre = documentos.find((documento)=>documento.id === element.tipodocumento).nombre;
+
+
+
+    
+    
 
        // Llenar los datos del usuario en el template clonado
        $template.querySelector('.nombre').textContent = element.nombres;
@@ -225,9 +230,7 @@ const save = (event) => {
 }
 
 const guardar = (data) => {
-    console.log(data);
 
-    return
     fetch(`${URL}/users`, {
         method: 'POST',
         body: JSON.stringify(data), 
@@ -244,7 +247,7 @@ const guardar = (data) => {
 
 const actualiza = async (data) =>{
     //console.log(data);
-    const response = await enviar (`users/${user.value}`, {
+    const response = await enviar (`/${user.value}`, {
         method: 'PUT',
         body: JSON.stringify(data),
         headers: {
@@ -270,6 +273,13 @@ const buscar = async (elemento) => {
         console.error('Error al buscar datos:', error);
     }
 }  
+
+const  editrow = (data) => {
+    const tr = document.querySelector(`#user_${data.id}`)
+     tr.querySelector(".nombre").textContent = data.first_name
+       
+}
+
 
 const loadFrom = (data) => {
     const {

@@ -20,7 +20,7 @@ $formulario.addEventListener("submit", (event) => {
   if (response) {
     boton.setAttribute("disabled", "");
 
-    fetch('http://localhost:3000/documento', {
+    fetch('http://localhost:3000/documents', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
