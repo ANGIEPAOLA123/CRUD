@@ -20,28 +20,28 @@
 .layout {
     display: grid;
     grid-template-areas: "form grid-container";
-    grid-template-columns: 400px 1fr; /* 400px es un tamaño fijo y el otro es auto con 1fr */
-    gap: 1rem; /* por defecto es de 16px*/
+    grid-template-columns: 400px 1fr; 
+    gap: 1rem; 
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; /*los bordes de la tabla se combinan en uno solo */
+    border-collapse: collapse; 
 }
 
 th, td{
-    border: 2px solid #b97efd;
+    border: 2px solid #b147f7;
     padding: 10px;
     text-align: center;
 }
 
 th {
-    background-color: #ceaef3;
+    background-color: #d4b3ff;
 }
 
 form{
-    background-color: #ceaef3;
-    border:  solid 5px #b476fc;
+    background-color: #d4b3ff;
+    border:  solid 5px #b147f7;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -51,7 +51,7 @@ form{
 
 input, select, button{
     padding: 12px;
-    border:solid 2px #c592ff;
+    border:solid 2px #b147f7;
     border-radius: 8px;
     outline: none; 
 }
@@ -61,14 +61,14 @@ button{
 }
 
 button{
-    background-color: #c38eff;
-    color: rgb(255, 254, 254);
+    background-color: #c090ff;
+    color: white;
     cursor: pointer;
 }
 
 button:hover{
-    background-color: #9f53f7;
-    color: rgb(255, 254, 254);
+    background-color: #923fff;
+    color: white;
 }
 
 label{
@@ -98,5 +98,5 @@ label{
 
 button[disabled] {
     cursor: not-allowed;
-    opacity: 0.5; /* Para que se vea deshabilitado */
+    opacity: 0.5; /
 }
